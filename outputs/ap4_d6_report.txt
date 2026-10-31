@@ -1,0 +1,218 @@
+BASELINE  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  binding=[]
+
+== rf_grid
+0%                                     RE  66.59  Auto   9.60  Eq  23.81 | E[R]  34.86  vol  4.99  SR  6.987
+2% (v2 floor)                          RE  64.88  Auto   9.78  Eq  25.34 | E[R]  35.47  vol  5.08  SR  6.590
+3%                                     RE  63.92  Auto   9.88  Eq  26.20 | E[R]  35.81  vol  5.13  SR  6.394
+4.5% (v2 ceiling, baseline)            RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104
+PSIA 24m median, unclipped             RE  51.46  Auto  11.22  Eq  37.32 | E[R]  40.27  vol  5.94  SR  4.888
+PSIA 24m mean, unclipped               RE   2.00  Auto  13.81  Eq  84.19 | E[R]  59.09  vol 10.68  SR  3.555
+
+== clip_grid
+±5%                                    RE  43.45  Auto  14.16  Eq  42.39 | E[R]  32.58  vol  3.70  SR  7.595  []
+±10%                                   RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+±15%                                   RE  70.00  Auto   9.50  Eq  20.50 | E[R]  35.05  vol  5.41  SR  5.645  ['Immobilière@cap']
+±20%                                   RE  70.00  Auto  11.65  Eq  18.35 | E[R]  34.39  vol  5.51  SR  5.423  ['Immobilière@cap']
+none                                   RE  70.00  Auto  24.64  Eq   5.36 | E[R]  28.37  vol  5.26  SR  4.535  ['Immobilière@cap']
+
+== gap_variants
+main                                   RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104
+low                                    RE  61.44  Auto   9.80  Eq  28.77 | E[R]  36.85  vol  5.35  SR  6.051
+high                                   RE  62.79  Auto  10.38  Eq  26.83 | E[R]  36.06  vol  5.14  SR  6.144
+log_linear_interpolation               RE  62.57  Auto  11.15  Eq  26.28 | E[R]  35.82  vol  5.07  SR  6.177
+
+== estimation_variants
+v2 first-row zero kept (78 rows)       RE  62.01  Auto  10.09  Eq  27.90 | E[R]  36.03  vol  5.34  SR  5.901
+simple instead of log returns          RE  60.26  Auto  10.88  Eq  28.86 | E[R]  37.49  vol  5.39  SR  6.115
+Ledoit-Wolf covariance                 RE  48.39  Auto  17.14  Eq  34.47 | E[R]  39.02  vol  5.66  SR  6.098
+Bayes-Stein mean                       RE  64.06  Auto   9.87  Eq  26.07 | E[R]  35.18  vol  5.12  SR  5.988
+Bayes-Stein mean + Ledoit-Wolf cov     RE  49.84  Auto  17.25  Eq  32.91 | E[R]  37.63  vol  5.56  SR  5.960
+
+== benchmarks_in_sample
+max-Sharpe (baseline)                  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104
+minimum variance                       RE  70.00  Auto  20.33  Eq   9.67 | E[R]  28.98  vol  4.53  SR  5.409
+equal weight                           RE  33.33  Auto  33.33  Eq  33.33 | E[R]  38.28  vol  5.79  SR  5.840
+risk parity (ERC, bounded)             RE  48.01  Auto  30.74  Eq  21.25 | E[R]  33.46  vol  5.04  SR  5.745
+risk parity (ERC, unbounded)           RE  48.01  Auto  30.74  Eq  21.25 | E[R]  33.46  vol  5.04  SR  5.745
+actual book Dec 2025                   RE  78.59  Auto   6.15  Eq  15.26 | E[R]  31.47  vol  4.60  SR  5.866
+actual book average                    RE  86.06  Auto   6.88  Eq   7.06 | E[R]  28.16  vol  4.41  SR  5.360
+
+== cap_floor_grid
+cap 0.50 floor 0.00  RE  50.00  Auto  17.83  Eq  32.17 | E[R]  38.08  vol  5.54  SR  6.059  ['Immobilière@cap']
+cap 0.50 floor 0.01  RE  50.00  Auto  17.83  Eq  32.17 | E[R]  38.08  vol  5.54  SR  6.059  ['Immobilière@cap']
+cap 0.50 floor 0.02  RE  50.00  Auto  17.83  Eq  32.17 | E[R]  38.08  vol  5.54  SR  6.059  ['Immobilière@cap']
+cap 0.50 floor 0.05  RE  50.00  Auto  17.83  Eq  32.17 | E[R]  38.08  vol  5.54  SR  6.059  ['Immobilière@cap']
+cap 0.60 floor 0.00  RE  60.00  Auto  11.57  Eq  28.43 | E[R]  36.68  vol  5.27  SR  6.102  ['Immobilière@cap']
+cap 0.60 floor 0.01  RE  60.00  Auto  11.57  Eq  28.43 | E[R]  36.68  vol  5.27  SR  6.102  ['Immobilière@cap']
+cap 0.60 floor 0.02  RE  60.00  Auto  11.57  Eq  28.43 | E[R]  36.68  vol  5.27  SR  6.102  ['Immobilière@cap']
+cap 0.60 floor 0.05  RE  60.00  Auto  11.57  Eq  28.43 | E[R]  36.68  vol  5.27  SR  6.102  ['Immobilière@cap']
+cap 0.70 floor 0.00  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 0.70 floor 0.01  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 0.70 floor 0.02  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 0.70 floor 0.05  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 0.80 floor 0.00  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 0.80 floor 0.01  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 0.80 floor 0.02  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 0.80 floor 0.05  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 1.00 floor 0.00  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 1.00 floor 0.01  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 1.00 floor 0.02  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+cap 1.00 floor 0.05  RE  62.32  Auto  10.06  Eq  27.63 | E[R]  36.39  vol  5.22  SR  6.104  []
+
+== bootstrap
+{
+ "weights_percentiles": {
+  "Immobilière": {
+   "p5": 0.384,
+   "p25": 0.524,
+   "p50": 0.6142,
+   "p75": 0.6873,
+   "p95": 0.7
+  },
+  "Automobile": {
+   "p5": 0.02,
+   "p25": 0.0571,
+   "p50": 0.1161,
+   "p75": 0.1876,
+   "p95": 0.3245
+  },
+  "Equipement": {
+   "p5": 0.1818,
+   "p25": 0.2314,
+   "p50": 0.2666,
+   "p75": 0.309,
+   "p95": 0.4025
+  }
+ },
+ "weights_mean_resampled": {
+  "Immobilière": 0.5896,
+  "Automobile": 0.1347,
+  "Equipement": 0.2757
+ },
+ "resampled_weights_on_full_sample": {
+  "weights": {
+   "Immobilière": 0.5895570375360739,
+   "Automobile": 0.1347433039571677,
+   "Equipement": 0.27569965850675565
+  },
+  "return": 0.36304076891796355,
+  "volatility": 0.0521604824798393,
+  "sharpe": 6.097350979084414
+ },
+ "sharpe_in_resample_percentiles": {
+  "p5": 5.565,
+  "p25": 6.008,
+  "p50": 6.388,
+  "p75": 6.813,
+  "p95": 7.716
+ },
+ "share_re_at_70pct_cap": 0.204,
+ "share_at_2pct_floor": {
+  "Immobilière": 0.0,
+  "Automobile": 0.102,
+  "Equipement": 0.0
+ },
+ "share_re_largest_weight": 0.94
+}
+
+== qp_frontier
+{
+ "n_points": 40,
+ "max_sharpe_on_frontier_grid": 6.103777922030056,
+ "tangency_from_optimiser": 6.104108673070354,
+ "mc_cloud_best_sharpe": 6.1039426457521655,
+ "mc_points_above_minvar_return": 6711,
+ "mc_excess_vol_vs_frontier_pct_points": {
+  "median": 0.09934925901610991,
+  "p95": 1.5423639272433989,
+  "min": -0.001989300694874019
+ },
+ "mc_share_within_10bp_of_frontier": 0.5012665772612129
+}
+
+== out_of_sample 2022-08-01..2025-12-01 (41 months)
+-- expanding
+max-Sharpe               avgW {'Immobilière': 0.6463, 'Automobile': 0.0314, 'Equipement': 0.3223}  clipped R  26.77 vol  3.07 SR  7.244 | unclipped R  27.19 vol  3.40 SR  6.677 | turnover/yr 0.163 | SR@50bp 7.222
+max-Sharpe LW+BS         avgW {'Immobilière': 0.4371, 'Automobile': 0.1319, 'Equipement': 0.431}  clipped R  30.16 vol  3.94 SR  6.515 | unclipped R  30.69 vol  4.33 SR  6.044 | turnover/yr 0.264 | SR@50bp 6.488
+minimum variance         avgW {'Immobilière': 0.7, 'Automobile': 0.1562, 'Equipement': 0.1438}  clipped R  22.04 vol  1.72 SR 10.203 | unclipped R  22.21 vol  1.82 SR  9.748 | turnover/yr 0.139 | SR@50bp 10.155
+risk parity (bounded)    avgW {'Immobilière': 0.4827, 'Automobile': 0.2828, 'Equipement': 0.2344}  clipped R  24.41 vol  2.39 SR  8.316 | unclipped R  24.73 vol  2.66 SR  7.615 | turnover/yr 0.131 | SR@50bp 8.284
+equal weight             avgW {'Immobilière': 0.3333, 'Automobile': 0.3333, 'Equipement': 0.3333}  clipped R  27.10 vol  3.14 SR  7.192 | unclipped R  27.57 vol  3.58 SR  6.452 | turnover/yr 0.161 | SR@50bp 7.167
+actual book              avgW {'Immobilière': 0.8333, 'Automobile': 0.0577, 'Equipement': 0.109}  clipped R  20.00 vol  1.62 SR  9.594 | unclipped R  20.17 vol  1.74 SR  9.008 | turnover/yr 0.003 | SR@50bp 9.593
+-- rolling
+max-Sharpe               avgW {'Immobilière': 0.6083, 'Automobile': 0.1297, 'Equipement': 0.262}  clipped R  26.22 vol  2.84 SR  7.638 | unclipped R  26.48 vol  2.98 SR  7.383 | turnover/yr 0.797 | SR@50bp 7.412
+max-Sharpe LW+BS         avgW {'Immobilière': 0.4453, 'Automobile': 0.1991, 'Equipement': 0.3556}  clipped R  29.03 vol  3.62 SR  6.771 | unclipped R  29.44 vol  3.90 SR  6.402 | turnover/yr 0.829 | SR@50bp 6.609
+minimum variance         avgW {'Immobilière': 0.6678, 'Automobile': 0.233, 'Equipement': 0.0992}  clipped R  20.37 vol  2.02 SR  7.865 | unclipped R  20.55 vol  2.13 SR  7.536 | turnover/yr 0.523 | SR@50bp 7.670
+risk parity (bounded)    avgW {'Immobilière': 0.5224, 'Automobile': 0.2993, 'Equipement': 0.1783}  clipped R  22.50 vol  2.16 SR  8.324 | unclipped R  22.75 vol  2.33 SR  7.838 | turnover/yr 0.477 | SR@50bp 8.138
+equal weight             avgW {'Immobilière': 0.3333, 'Automobile': 0.3333, 'Equipement': 0.3333}  clipped R  27.10 vol  3.14 SR  7.192 | unclipped R  27.57 vol  3.58 SR  6.452 | turnover/yr 0.161 | SR@50bp 7.167
+actual book              avgW {'Immobilière': 0.8333, 'Automobile': 0.0577, 'Equipement': 0.109}  clipped R  20.00 vol  1.62 SR  9.594 | unclipped R  20.17 vol  1.74 SR  9.008 | turnover/yr 0.003 | SR@50bp 9.593
+
+== time_variation
+{
+ "rolling_24m_correlation": {
+  "Immobilière-Automobile": {
+   "min": -0.14080559689307123,
+   "median": 0.19279842338302308,
+   "max": 0.5763509238589792,
+   "last": 0.5763509238589792,
+   "full_sample": 0.4663299816665767
+  },
+  "Immobilière-Equipement": {
+   "min": -0.3200871270178932,
+   "median": -0.0282703358803112,
+   "max": 0.495061850455629,
+   "last": 0.1548857616014678,
+   "full_sample": 0.24659514894478718
+  },
+  "Automobile-Equipement": {
+   "min": -0.6942613501259844,
+   "median": -0.19312112405584972,
+   "max": 0.31751596366823326,
+   "last": 0.27508875182120485,
+   "full_sample": -0.017961314698330927
+  }
+ },
+ "split_sample": {
+  "2019-08..2022-09": {
+   "weights": {
+    "Immobilière": 0.6885621557650667,
+    "Automobile": 0.02,
+    "Equipement": 0.2914378442349333
+   },
+   "return": 0.4921045362420631,
+   "volatility": 0.05241354983077282,
+   "sharpe": 8.5303235076736,
+   "mu": {
+    "Immobilière": 0.3427874475088738,
+    "Automobile": 0.2940352745475673,
+    "Equipement": 0.8584793357293418
+   }
+  },
+  "2022-10..2025-12": {
+   "weights": {
+    "Immobilière": 0.7,
+    "Automobile": 0.14982168153584915,
+    "Equipement": 0.1501783184640631
+   },
+   "return": 0.2141491417949105,
+   "volatility": 0.01637842803986075,
+   "sharpe": 10.327556550802456,
+   "mu": {
+    "Immobilière": 0.16820532335168195,
+    "Automobile": 0.18178221251546284,
+    "Equipement": 0.46058911435282573
+   }
+  }
+ },
+ "volatility_by_half": {
+  "first_half": {
+   "Immobilière": 0.0508,
+   "Automobile": 0.0952,
+   "Equipement": 0.1309
+  },
+  "second_half": {
+   "Immobilière": 0.0134,
+   "Automobile": 0.06,
+   "Equipement": 0.0918
+  }
+ }
+}

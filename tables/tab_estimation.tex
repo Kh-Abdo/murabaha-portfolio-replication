@@ -1,0 +1,12 @@
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Estimator} & RE & Auto & Equip+Raw & Growth & Vol. & Ratio \\
+\midrule
+Baseline & 62.32 & 10.06 & 27.63 & 36.39 & 5.22 & 6.10 \\
+Original code convention (78 rows) & 62.01 & 10.09 & 27.90 & 36.03 & 5.34 & 5.90 \\
+Simple instead of log growth & 60.26 & 10.88 & 28.86 & 37.49 & 5.39 & 6.12 \\
+Ledoit--Wolf covariance & 48.39 & 17.14 & 34.47 & 39.02 & 5.66 & 6.10 \\
+Bayes--Stein mean & 64.06 & 9.87 & 26.07 & 35.18 & 5.12 & 5.99 \\
+Bayes--Stein mean + Ledoit--Wolf cov. & 49.84 & 17.25 & 32.91 & 37.63 & 5.56 & 5.96 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,310 @@
+{
+  "inputs": {
+    "data": "../data/data_corrected.xlsx",
+    "bfp": "data/raw/4CPBFP.xlsx",
+    "versions": {
+      "python": "3.12.10",
+      "numpy": "2.4.2",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0"
+    }
+  },
+  "sample": {
+    "n_months": 78,
+    "first": "2019-07-01",
+    "last": "2025-12-01",
+    "n_returns": 77,
+    "rows_used_for_mu_cov": 77
+  },
+  "expected_returns": {
+    "Immobilière": 0.254362735273413,
+    "Automobile": 0.23717982754429356,
+    "Equipement": 0.6862548469559455,
+    "Matieres Premieres": -0.006375254983245962
+  },
+  "expected_returns_unclipped": {
+    "Immobilière": 0.254362735273413,
+    "Automobile": 0.23906649178088332,
+    "Equipement": 0.8140974271821025,
+    "Matieres Premieres": -0.006375254983245962
+  },
+  "cov_annual": [
+    [
+      0.0019900149,
+      0.0016744468,
+      0.0012833992,
+      -1.00397e-05
+    ],
+    [
+      0.0016744468,
+      0.0064788766,
+      0.000180761,
+      -8.35198e-05
+    ],
+    [
+      0.0012833992,
+      0.000180761,
+      0.0187868998,
+      -9.49895e-05
+    ],
+    [
+      -1.00397e-05,
+      -8.35198e-05,
+      -9.49895e-05,
+      0.0006919285
+    ]
+  ],
+  "corr": [
+    [
+      1.0,
+      0.46633,
+      0.209897,
+      -0.008556
+    ],
+    [
+      0.46633,
+      1.0,
+      0.016384,
+      -0.039447
+    ],
+    [
+      0.209897,
+      0.016384,
+      1.0,
+      -0.026346
+    ],
+    [
+      -0.008556,
+      -0.039447,
+      -0.026346,
+      1.0
+    ]
+  ],
+  "rf": 0.045,
+  "rf_info": {
+    "column": "Dépôts d'investissement",
+    "rf_raw_unclipped": 0.11213350093038339,
+    "window_start": "2024-01-01",
+    "window_end": "2025-12-01",
+    "window_n": 24,
+    "rf_raw_mean_instead_of_median": 0.211291141862878,
+    "rf_raw_full_sample_median": 0.37144553134594116
+  },
+  "optimal": {
+    "weights": {
+      "Immobilière": 0.6693564932031224,
+      "Automobile": 0.06945557615208371,
+      "Equipement": 0.241187930644794,
+      "Matieres Premieres": 0.02
+    },
+    "return": 0.35212169139050603,
+    "volatility": 0.050899064637991674,
+    "sharpe": 6.033935860606498
+  },
+  "solver": {
+    "success": true,
+    "status": 0,
+    "message": "Optimization terminated successfully",
+    "nit": 9,
+    "nfev": 47,
+    "fun": -6.033935860606498
+  },
+  "covariance_diagnostics": {
+    "eigenvalues": [
+      0.0006896832508705454,
+      0.0013573776703305201,
+      0.007008044897451382,
+      0.01889261386712676
+    ],
+    "positive_definite": true,
+    "condition_number": 27.393174828125456
+  },
+  "kkt": {
+    "gradient_neg_sharpe": [
+      -0.9036754711663313,
+      -0.9036752045235754,
+      -0.9036754145784979,
+      0.0749619442955183
+    ],
+    "nu_budget_multiplier": 0.9036753634228015,
+    "stationarity_residual_free_assets": [
+      -1.0774352976472557e-07,
+      1.588992261103428e-07,
+      -5.115569634561723e-08
+    ],
+    "active_lower_bounds": [
+      "Matieres Premieres"
+    ],
+    "active_upper_bounds": [],
+    "implied_lower_bound_multipliers": {
+      "Matieres Premieres": 0.9786373077183198
+    },
+    "implied_upper_bound_multipliers": {},
+    "budget_residual": 2.220446049250313e-16,
+    "min_bound_slack": 0.0
+  },
+  "winsorisation_counts": {
+    "Immobilière": {
+      "upper": 0,
+      "lower": 0,
+      "exact_zero": 0
+    },
+    "Automobile": {
+      "upper": 1,
+      "lower": 0,
+      "exact_zero": 0
+    },
+    "Equipement": {
+      "upper": 19,
+      "lower": 1,
+      "exact_zero": 0
+    },
+    "Matieres Premieres": {
+      "upper": 0,
+      "lower": 0,
+      "exact_zero": 62
+    }
+  },
+  "monte_carlo": {
+    "n_kept": 8000,
+    "attempts": 10444,
+    "best_sharpe": 6.027638420978758,
+    "best_weights": {
+      "Immobilière": 0.6304553163604255,
+      "Automobile": 0.0932519610085114,
+      "Equipement": 0.2560129115386594,
+      "Matieres Premieres": 0.020279811092403687
+    },
+    "max_return": 0.638051464123842,
+    "min_volatility": 0.022457110882930488
+  },
+  "notebook_stored": {
+    "n_months": 77,
+    "expected_returns": {
+      "Immobilière": 0.2322,
+      "Automobile": 0.221,
+      "Equipement": 0.6212,
+      "Matieres Premieres": -0.0064
+    },
+    "rf": 0.045,
+    "weights": {
+      "Immobilière": 0.3226,
+      "Automobile": 0.1211,
+      "Equipement": 0.5363,
+      "Matieres Premieres": 0.02
+    },
+    "return": 0.4347,
+    "volatility": 0.1042,
+    "sharpe": 3.7391,
+    "cov_diag": {
+      "Immobilière": 0.007411,
+      "Automobile": 0.009085,
+      "Equipement": 0.026451,
+      "Matieres Premieres": 0.000692
+    }
+  },
+  "reproduction_check": [
+    {
+      "item": "mu Immobilière",
+      "reproduced": 0.2544,
+      "notebook": 0.2322,
+      "match": false
+    },
+    {
+      "item": "w Immobilière",
+      "reproduced": 0.6694,
+      "notebook": 0.3226,
+      "match": false
+    },
+    {
+      "item": "cov[Immobilière,Immobilière]",
+      "reproduced": 0.00199,
+      "notebook": 0.007411,
+      "match": false
+    },
+    {
+      "item": "mu Automobile",
+      "reproduced": 0.2372,
+      "notebook": 0.221,
+      "match": false
+    },
+    {
+      "item": "w Automobile",
+      "reproduced": 0.0695,
+      "notebook": 0.1211,
+      "match": false
+    },
+    {
+      "item": "cov[Automobile,Automobile]",
+      "reproduced": 0.006479,
+      "notebook": 0.009085,
+      "match": false
+    },
+    {
+      "item": "mu Equipement",
+      "reproduced": 0.6863,
+      "notebook": 0.6212,
+      "match": false
+    },
+    {
+      "item": "w Equipement",
+      "reproduced": 0.2412,
+      "notebook": 0.5363,
+      "match": false
+    },
+    {
+      "item": "cov[Equipement,Equipement]",
+      "reproduced": 0.018787,
+      "notebook": 0.026451,
+      "match": false
+    },
+    {
+      "item": "mu Matieres Premieres",
+      "reproduced": -0.0064,
+      "notebook": -0.0064,
+      "match": true
+    },
+    {
+      "item": "w Matieres Premieres",
+      "reproduced": 0.02,
+      "notebook": 0.02,
+      "match": true
+    },
+    {
+      "item": "cov[Matieres Premieres,Matieres Premieres]",
+      "reproduced": 0.000692,
+      "notebook": 0.000692,
+      "match": true
+    },
+    {
+      "item": "n_months",
+      "reproduced": 78,
+      "notebook": 77,
+      "match": false
+    },
+    {
+      "item": "rf",
+      "reproduced": 0.045,
+      "notebook": 0.045,
+      "match": true
+    },
+    {
+      "item": "return",
+      "reproduced": 0.3521,
+      "notebook": 0.4347,
+      "match": false
+    },
+    {
+      "item": "volatility",
+      "reproduced": 0.0509,
+      "notebook": 0.1042,
+      "match": false
+    },
+    {
+      "item": "sharpe",
+      "reproduced": 6.0339,
+      "notebook": 3.7391,
+      "match": false
+    }
+  ]
+}

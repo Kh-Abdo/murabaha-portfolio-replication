@@ -1,0 +1,1639 @@
+{
+  "settings": {
+    "data": "data/data_corrected.xlsx",
+    "assets": [
+      "Immobilière",
+      "Automobile",
+      "Equipement"
+    ],
+    "rf_base": 0.045,
+    "bounds_base": {
+      "lower": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "upper": [
+        0.7,
+        1.0,
+        1.0
+      ]
+    },
+    "oos_start_months": 36,
+    "rolling_window": 36,
+    "n_boot": 1000,
+    "block_length": 6,
+    "seed": 42,
+    "drop_first_row_zero": true
+  },
+  "baseline": {
+    "weights": {
+      "Immobilière": 0.6231773933234245,
+      "Automobile": 0.10055363532615508,
+      "Equipement": 0.27626897135042033
+    },
+    "return": 0.3638574452371996,
+    "volatility": 0.0522365282656108,
+    "sharpe": 6.104108673070354,
+    "binding": [],
+    "rf_estimate_clipped": 0.045,
+    "rf_info": {
+      "column": "Dépôts d'investissement",
+      "rf_raw_unclipped": 0.11213350093038339,
+      "window_start": "2024-01-01",
+      "window_end": "2025-12-01",
+      "window_n": 24,
+      "rf_raw_mean_instead_of_median": 0.211291141862878,
+      "rf_raw_full_sample_median": 0.37144553134594116
+    }
+  },
+  "rf_grid": {
+    "0%": {
+      "weights": {
+        "Immobilière": 0.6659162805343664,
+        "Automobile": 0.09597018878723719,
+        "Equipement": 0.2381135306783965
+      },
+      "return": 0.348575287752799,
+      "volatility": 0.049887517865649524,
+      "sharpe": 6.987224513585462,
+      "rf": 0.0
+    },
+    "2% (v2 floor)": {
+      "weights": {
+        "Immobilière": 0.6488085223700959,
+        "Automobile": 0.09780487919440065,
+        "Equipement": 0.25338659843550354
+      },
+      "return": 0.35469251298633653,
+      "volatility": 0.05078964295876298,
+      "sharpe": 6.589778810968987,
+      "rf": 0.02
+    },
+    "3%": {
+      "weights": {
+        "Immobilière": 0.6391925649004934,
+        "Automobile": 0.09883612346355342,
+        "Equipement": 0.2619713116359532
+      },
+      "return": 0.3581308939008822,
+      "volatility": 0.05131945209418105,
+      "sharpe": 6.393889266368219,
+      "rf": 0.03
+    },
+    "4.5% (v2 ceiling, baseline)": {
+      "weights": {
+        "Immobilière": 0.6231773933234245,
+        "Automobile": 0.10055363532615508,
+        "Equipement": 0.27626897135042033
+      },
+      "return": 0.3638574452371996,
+      "volatility": 0.0522365282656108,
+      "sharpe": 6.104108673070354,
+      "rf": 0.045
+    },
+    "PSIA 24m median, unclipped": {
+      "weights": {
+        "Immobilière": 0.5145867347781888,
+        "Automobile": 0.1121992394773475,
+        "Equipement": 0.3732140257444638
+      },
+      "return": 0.40268623480776233,
+      "volatility": 0.05943980223931029,
+      "sharpe": 4.888184733650124,
+      "rf": 0.11213350093038339
+    },
+    "PSIA 24m mean, unclipped": {
+      "weights": {
+        "Immobilière": 0.020000000000000004,
+        "Automobile": 0.1380859397846873,
+        "Equipement": 0.8419140602153128
+      },
+      "return": 0.5909343356841579,
+      "volatility": 0.1067876829834853,
+      "sharpe": 3.5551215572304495,
+      "rf": 0.211291141862878
+    }
+  },
+  "cap_floor_grid": [
+    {
+      "re_cap": 0.5,
+      "floor": 0.0,
+      "weights": {
+        "Immobilière": 0.49999999999999994,
+        "Automobile": 0.17829618106201864,
+        "Equipement": 0.32170381893798145
+      },
+      "return": 0.3808131169915813,
+      "volatility": 0.05542685105134222,
+      "sharpe": 6.058672116886374,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.5,
+      "floor": 0.01,
+      "weights": {
+        "Immobilière": 0.5,
+        "Automobile": 0.17829617809229129,
+        "Equipement": 0.3217038219077087
+      },
+      "return": 0.3808131182381858,
+      "volatility": 0.05542685125709761,
+      "sharpe": 6.058672116886375,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.5,
+      "floor": 0.02,
+      "weights": {
+        "Immobilière": 0.5,
+        "Automobile": 0.17829617946438278,
+        "Equipement": 0.3217038205356171
+      },
+      "return": 0.3808131176622219,
+      "volatility": 0.05542685116203324,
+      "sharpe": 6.058672116886375,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.5,
+      "floor": 0.05,
+      "weights": {
+        "Immobilière": 0.5,
+        "Automobile": 0.17829617714161078,
+        "Equipement": 0.3217038228583892
+      },
+      "return": 0.38081311863725364,
+      "volatility": 0.05542685132296483,
+      "sharpe": 6.058672116886375,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.6,
+      "floor": 0.0,
+      "weights": {
+        "Immobilière": 0.6,
+        "Automobile": 0.11566063068319034,
+        "Equipement": 0.2843393693168097
+      },
+      "return": 0.36684690678766735,
+      "volatility": 0.052741512011521864,
+      "sharpe": 6.102345088577608,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.6,
+      "floor": 0.01,
+      "weights": {
+        "Immobilière": 0.6,
+        "Automobile": 0.11566063031510496,
+        "Equipement": 0.2843393696848951
+      },
+      "return": 0.3668469069421788,
+      "volatility": 0.052741512036841874,
+      "sharpe": 6.102345088577608,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.6,
+      "floor": 0.02,
+      "weights": {
+        "Immobilière": 0.6,
+        "Automobile": 0.11566062815220958,
+        "Equipement": 0.28433937184779035
+      },
+      "return": 0.3668469078500988,
+      "volatility": 0.05274151218562403,
+      "sharpe": 6.102345088577608,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.6,
+      "floor": 0.05,
+      "weights": {
+        "Immobilière": 0.6,
+        "Automobile": 0.11566062842513881,
+        "Equipement": 0.28433937157486117
+      },
+      "return": 0.3668469077355312,
+      "volatility": 0.05274151216684966,
+      "sharpe": 6.102345088577608,
+      "binding": [
+        "Immobilière@cap"
+      ]
+    },
+    {
+      "re_cap": 0.7,
+      "floor": 0.0,
+      "weights": {
+        "Immobilière": 0.6231773713311449,
+        "Automobile": 0.10055365501898922,
+        "Equipement": 0.2762689736498659
+      },
+      "return": 0.3638574458245482,
+      "volatility": 0.05223652836183263,
+      "sharpe": 6.104108673070357,
+      "binding": []
+    },
+    {
+      "re_cap": 0.7,
+      "floor": 0.01,
+      "weights": {
+        "Immobilière": 0.6231773942581166,
+        "Automobile": 0.10055363800584628,
+        "Equipement": 0.2762689677360371
+      },
+      "return": 0.3638574437360482,
+      "volatility": 0.05223652801968604,
+      "sharpe": 6.104108673070356,
+      "binding": []
+    },
+    {
+      "re_cap": 0.7,
+      "floor": 0.02,
+      "weights": {
+        "Immobilière": 0.6231773933234245,
+        "Automobile": 0.10055363532615508,
+        "Equipement": 0.27626897135042033
+      },
+      "return": 0.3638574452371996,
+      "volatility": 0.0522365282656108,
+      "sharpe": 6.104108673070354,
+      "binding": []
+    },
+    {
+      "re_cap": 0.7,
+      "floor": 0.05,
+      "weights": {
+        "Immobilière": 0.6231773811604818,
+        "Automobile": 0.10055364456730077,
+        "Equipement": 0.27626897427221747
+      },
+      "return": 0.36385744625468974,
+      "volatility": 0.05223652843230018,
+      "sharpe": 6.104108673070356,
+      "binding": []
+    },
+    {
+      "re_cap": 0.8,
+      "floor": 0.0,
+      "weights": {
+        "Immobilière": 0.6231773768162177,
+        "Automobile": 0.10055365398971035,
+        "Equipement": 0.27626896919407207
+      },
+      "return": 0.36385744404838605,
+      "volatility": 0.0522365280708545,
+      "sharpe": 6.104108673070356,
+      "binding": []
+    },
+    {
+      "re_cap": 0.8,
+      "floor": 0.01,
+      "weights": {
+        "Immobilière": 0.6231773942581166,
+        "Automobile": 0.10055363800584628,
+        "Equipement": 0.2762689677360371
+      },
+      "return": 0.3638574437360482,
+      "volatility": 0.05223652801968604,
+      "sharpe": 6.104108673070356,
+      "binding": []
+    },
+    {
+      "re_cap": 0.8,
+      "floor": 0.02,
+      "weights": {
+        "Immobilière": 0.6231773665443305,
+        "Automobile": 0.10055364737823426,
+        "Equipement": 0.2762689860774351
+      },
+      "return": 0.3638574509590261,
+      "volatility": 0.05223652920298379,
+      "sharpe": 6.104108673070352,
+      "binding": []
+    },
+    {
+      "re_cap": 0.8,
+      "floor": 0.05,
+      "weights": {
+        "Immobilière": 0.6231773862279895,
+        "Automobile": 0.10055364812614596,
+        "Equipement": 0.27626896564586456
+      },
+      "return": 0.3638574427206741,
+      "volatility": 0.05223652785334331,
+      "sharpe": 6.104108673070356,
+      "binding": []
+    },
+    {
+      "re_cap": 1.0,
+      "floor": 0.0,
+      "weights": {
+        "Immobilière": 0.6231773998439964,
+        "Automobile": 0.10055363172908316,
+        "Equipement": 0.27626896842692045
+      },
+      "return": 0.36385744412204246,
+      "volatility": 0.0522365280829212,
+      "sharpe": 6.104108673070355,
+      "binding": []
+    },
+    {
+      "re_cap": 1.0,
+      "floor": 0.01,
+      "weights": {
+        "Immobilière": 0.6231773942581166,
+        "Automobile": 0.10055363800584628,
+        "Equipement": 0.2762689677360371
+      },
+      "return": 0.3638574437360482,
+      "volatility": 0.05223652801968604,
+      "sharpe": 6.104108673070356,
+      "binding": []
+    },
+    {
+      "re_cap": 1.0,
+      "floor": 0.02,
+      "weights": {
+        "Immobilière": 0.6231774005696347,
+        "Automobile": 0.10055363972242325,
+        "Equipement": 0.276268959707942
+      },
+      "return": 0.3638574404745394,
+      "volatility": 0.05223652748537236,
+      "sharpe": 6.104108673070355,
+      "binding": []
+    },
+    {
+      "re_cap": 1.0,
+      "floor": 0.05,
+      "weights": {
+        "Immobilière": 0.6231774270106466,
+        "Automobile": 0.1005536176303343,
+        "Equipement": 0.27626895535901924
+      },
+      "return": 0.3638574391033226,
+      "volatility": 0.052236527260734064,
+      "sharpe": 6.104108673070351,
+      "binding": []
+    }
+  ],
+  "clip_grid": {
+    "±5%": {
+      "weights": {
+        "Immobilière": 0.43452409386750174,
+        "Automobile": 0.14162202408497154,
+        "Equipement": 0.4238538820475268
+      },
+      "return": 0.32582891217714627,
+      "volatility": 0.03697651902315405,
+      "sharpe": 7.5947904128372965,
+      "mu": {
+        "Immobilière": 0.2510717264239004,
+        "Automobile": 0.2117386731837806,
+        "Equipement": 0.440588953394931
+      },
+      "binding": [],
+      "n_clipped": {
+        "Immobilière": 4,
+        "Automobile": 6,
+        "Equipement": 46
+      }
+    },
+    "±10%": {
+      "weights": {
+        "Immobilière": 0.6231773933234245,
+        "Automobile": 0.10055363532615508,
+        "Equipement": 0.27626897135042033
+      },
+      "return": 0.3638574452371996,
+      "volatility": 0.0522365282656108,
+      "sharpe": 6.104108673070354,
+      "mu": {
+        "Immobilière": 0.254362735273413,
+        "Automobile": 0.23717982754429356,
+        "Equipement": 0.6569505223048727
+      },
+      "binding": [],
+      "n_clipped": {
+        "Immobilière": 0,
+        "Automobile": 1,
+        "Equipement": 17
+      }
+    },
+    "±15%": {
+      "weights": {
+        "Immobilière": 0.7,
+        "Automobile": 0.0949513534089375,
+        "Equipement": 0.20504864659106242
+      },
+      "return": 0.35050987167346803,
+      "volatility": 0.054121355019032924,
+      "sharpe": 5.644904337040878,
+      "mu": {
+        "Immobilière": 0.254362735273413,
+        "Automobile": 0.23906649178088332,
+        "Equipement": 0.730345079191978
+      },
+      "binding": [
+        "Immobilière@cap"
+      ],
+      "n_clipped": {
+        "Immobilière": 0,
+        "Automobile": 0,
+        "Equipement": 4
+      }
+    },
+    "±20%": {
+      "weights": {
+        "Immobilière": 0.7,
+        "Automobile": 0.11652627993391652,
+        "Equipement": 0.1834737200660834
+      },
+      "return": 0.3438734845619855,
+      "volatility": 0.05510907323058323,
+      "sharpe": 5.423308124080796,
+      "mu": {
+        "Immobilière": 0.254362735273413,
+        "Automobile": 0.23906649178088332,
+        "Equipement": 0.7519444249390419
+      },
+      "binding": [
+        "Immobilière@cap"
+      ],
+      "n_clipped": {
+        "Immobilière": 0,
+        "Automobile": 0,
+        "Equipement": 2
+      }
+    },
+    "none": {
+      "weights": {
+        "Immobilière": 0.7,
+        "Automobile": 0.24639420449796984,
+        "Equipement": 0.053605795502029895
+      },
+      "return": 0.2837096937928219,
+      "volatility": 0.05264085337356379,
+      "sharpe": 4.534685106619145,
+      "mu": {
+        "Immobilière": 0.254362735273413,
+        "Automobile": 0.23906649178088332,
+        "Equipement": 0.8721292278032007
+      },
+      "binding": [
+        "Immobilière@cap"
+      ],
+      "n_clipped": {
+        "Immobilière": 0,
+        "Automobile": 0,
+        "Equipement": 0
+      }
+    }
+  },
+  "gap_variants": {
+    "main": {
+      "weights": {
+        "Immobilière": 0.6231773933234245,
+        "Automobile": 0.10055363532615508,
+        "Equipement": 0.27626897135042033
+      },
+      "return": 0.3638574452371996,
+      "volatility": 0.0522365282656108,
+      "sharpe": 6.104108673070354
+    },
+    "low": {
+      "weights": {
+        "Immobilière": 0.6143749829760718,
+        "Automobile": 0.09796937132689476,
+        "Equipement": 0.2876556456970334
+      },
+      "return": 0.36848598643389746,
+      "volatility": 0.0534577059460986,
+      "sharpe": 6.051250810501826
+    },
+    "high": {
+      "weights": {
+        "Immobilière": 0.6278533905129806,
+        "Automobile": 0.10384738262412244,
+        "Equipement": 0.268299226862897
+      },
+      "return": 0.3605923272848574,
+      "volatility": 0.05136558559514422,
+      "sharpe": 6.144042234275463
+    },
+    "log_linear_interpolation": {
+      "weights": {
+        "Immobilière": 0.6257435644272575,
+        "Automobile": 0.11149068453098956,
+        "Equipement": 0.2627657510417529
+      },
+      "return": 0.35823328334801946,
+      "volatility": 0.050709702580092345,
+      "sharpe": 6.176989164022209
+    }
+  },
+  "estimation_variants": {
+    "v2 first-row zero kept (78 rows)": {
+      "weights": {
+        "Immobilière": 0.6201087856064402,
+        "Automobile": 0.10088273061399176,
+        "Equipement": 0.27900848377956805
+      },
+      "return": 0.36027577845591724,
+      "volatility": 0.05342436428722321,
+      "sharpe": 5.901348245547912
+    },
+    "simple instead of log returns": {
+      "weights": {
+        "Immobilière": 0.6026286275944898,
+        "Automobile": 0.10881205999261034,
+        "Equipement": 0.2885593124128999
+      },
+      "return": 0.37489447972702816,
+      "volatility": 0.05394593520851261,
+      "sharpe": 6.1152796490025665
+    },
+    "Ledoit-Wolf covariance": {
+      "weights": {
+        "Immobilière": 0.48388981977670215,
+        "Automobile": 0.17144689847334776,
+        "Equipement": 0.34466328174995015
+      },
+      "return": 0.3901740069072147,
+      "volatility": 0.056602468793264235,
+      "sharpe": 6.098214693919691,
+      "shrinkage_intensity": 0.10938427647890689
+    },
+    "Bayes-Stein mean": {
+      "weights": {
+        "Immobilière": 0.6405689349461532,
+        "Automobile": 0.09868852492611752,
+        "Equipement": 0.2607425401277294
+      },
+      "return": 0.35183928798847264,
+      "volatility": 0.05124264126668322,
+      "sharpe": 5.987967840915578,
+      "shrinkage_phi": 0.06741751361020996,
+      "mu": {
+        "Immobilière": 0.25552589315811197,
+        "Automobile": 0.23950141434468333,
+        "Equipement": 0.6309722125780739
+      }
+    },
+    "Bayes-Stein mean + Ledoit-Wolf cov": {
+      "weights": {
+        "Immobilière": 0.4984158830727765,
+        "Automobile": 0.17248524015130795,
+        "Equipement": 0.3290988767759156
+      },
+      "return": 0.37632086909243934,
+      "volatility": 0.055595362927888775,
+      "sharpe": 5.959505463111853
+    }
+  },
+  "bootstrap": {
+    "weights_percentiles": {
+      "Immobilière": {
+        "p5": 0.384,
+        "p25": 0.524,
+        "p50": 0.6142,
+        "p75": 0.6873,
+        "p95": 0.7
+      },
+      "Automobile": {
+        "p5": 0.02,
+        "p25": 0.0571,
+        "p50": 0.1161,
+        "p75": 0.1876,
+        "p95": 0.3245
+      },
+      "Equipement": {
+        "p5": 0.1818,
+        "p25": 0.2314,
+        "p50": 0.2666,
+        "p75": 0.309,
+        "p95": 0.4025
+      }
+    },
+    "weights_mean_resampled": {
+      "Immobilière": 0.5896,
+      "Automobile": 0.1347,
+      "Equipement": 0.2757
+    },
+    "resampled_weights_on_full_sample": {
+      "weights": {
+        "Immobilière": 0.5895570375360739,
+        "Automobile": 0.1347433039571677,
+        "Equipement": 0.27569965850675565
+      },
+      "return": 0.36304076891796355,
+      "volatility": 0.0521604824798393,
+      "sharpe": 6.097350979084414
+    },
+    "sharpe_in_resample_percentiles": {
+      "p5": 5.565,
+      "p25": 6.008,
+      "p50": 6.388,
+      "p75": 6.813,
+      "p95": 7.716
+    },
+    "share_re_at_70pct_cap": 0.204,
+    "share_at_2pct_floor": {
+      "Immobilière": 0.0,
+      "Automobile": 0.102,
+      "Equipement": 0.0
+    },
+    "share_re_largest_weight": 0.94
+  },
+  "benchmarks_in_sample": {
+    "max-Sharpe (baseline)": {
+      "weights": {
+        "Immobilière": 0.6231773933234245,
+        "Automobile": 0.10055363532615508,
+        "Equipement": 0.27626897135042033
+      },
+      "return": 0.3638574452371996,
+      "volatility": 0.0522365282656108,
+      "sharpe": 6.104108673070354
+    },
+    "minimum variance": {
+      "weights": {
+        "Immobilière": 0.7,
+        "Automobile": 0.20325592832650602,
+        "Equipement": 0.09674407167349414
+      },
+      "return": 0.2898181891350271,
+      "volatility": 0.045262220571695704,
+      "sharpe": 5.408885954838058
+    },
+    "equal weight": {
+      "weights": {
+        "Immobilière": 0.3333333333333333,
+        "Automobile": 0.3333333333333333,
+        "Equipement": 0.3333333333333333
+      },
+      "return": 0.3828310283741931,
+      "volatility": 0.0578509004412424,
+      "sharpe": 5.839684876077581
+    },
+    "risk parity (ERC, bounded)": {
+      "weights": {
+        "Immobilière": 0.4801175299281576,
+        "Automobile": 0.3073761846281915,
+        "Equipement": 0.21250628544365086
+      },
+      "return": 0.3346335538418531,
+      "volatility": 0.050418122549876994,
+      "sharpe": 5.744631874289412
+    },
+    "risk parity (ERC, unbounded)": {
+      "weights": {
+        "Immobilière": 0.48012397455472583,
+        "Automobile": 0.3073638421189459,
+        "Equipement": 0.21251218332632824
+      },
+      "return": 0.3346361403375859,
+      "volatility": 0.050418139749312585,
+      "sharpe": 5.744681215485244
+    },
+    "actual book Dec 2025": {
+      "weights": {
+        "Immobilière": 0.7859074184286841,
+        "Automobile": 0.06148051683772909,
+        "Equipement": 0.15261206473358688
+      },
+      "return": 0.31474607464084836,
+      "volatility": 0.04598754486797945,
+      "sharpe": 5.865633301695763
+    },
+    "actual book average": {
+      "weights": {
+        "Immobilière": 0.8606242235934508,
+        "Automobile": 0.0687764459164482,
+        "Equipement": 0.07059933049010088
+      },
+      "return": 0.28160338417720626,
+      "volatility": 0.04414517580298828,
+      "sharpe": 5.359665691062671
+    }
+  },
+  "qp_frontier": {
+    "n_points": 40,
+    "points": [
+      {
+        "target": 0.2898181891350271,
+        "volatility": 0.045262220571695704,
+        "sharpe": 5.408885954838058,
+        "weights": {
+          "Immobilière": 0.7,
+          "Automobile": 0.2033,
+          "Equipement": 0.0967
+        }
+      },
+      {
+        "target": 0.2988101164051298,
+        "volatility": 0.04537732635716229,
+        "sharpe": 5.593324613429297,
+        "weights": {
+          "Immobilière": 0.7,
+          "Automobile": 0.1818,
+          "Equipement": 0.1182
+        }
+      },
+      {
+        "target": 0.30780204367523245,
+        "volatility": 0.045720905022267014,
+        "sharpe": 5.747962415600534,
+        "weights": {
+          "Immobilière": 0.7,
+          "Automobile": 0.1604,
+          "Equipement": 0.1396
+        }
+      },
+      {
+        "target": 0.3167939709453352,
+        "volatility": 0.04628786922372935,
+        "sharpe": 5.871818588832358,
+        "weights": {
+          "Immobilière": 0.7,
+          "Automobile": 0.139,
+          "Equipement": 0.161
+        }
+      },
+      {
+        "target": 0.32578589821543785,
+        "volatility": 0.04707014755636681,
+        "sharpe": 5.965264882146267,
+        "weights": {
+          "Immobilière": 0.7,
+          "Automobile": 0.1176,
+          "Equipement": 0.1824
+        }
+      },
+      {
+        "target": 0.3347778254855405,
+        "volatility": 0.048057226482292784,
+        "sharpe": 6.029849133975977,
+        "weights": {
+          "Immobilière": 0.7,
+          "Automobile": 0.0962,
+          "Equipement": 0.2038
+        }
+      },
+      {
+        "target": 0.34376975275564325,
+        "volatility": 0.04921672052746435,
+        "sharpe": 6.070492904721702,
+        "weights": {
+          "Immobilière": 0.6794,
+          "Automobile": 0.0945,
+          "Equipement": 0.2261
+        }
+      },
+      {
+        "target": 0.3527616800257459,
+        "volatility": 0.05049921330377747,
+        "sharpe": 6.094385632790137,
+        "weights": {
+          "Immobilière": 0.6542,
+          "Automobile": 0.0972,
+          "Equipement": 0.2486
+        }
+      },
+      {
+        "target": 0.3617536072958486,
+        "volatility": 0.0518946808586541,
+        "sharpe": 6.103777922030056,
+        "weights": {
+          "Immobilière": 0.6291,
+          "Automobile": 0.0999,
+          "Equipement": 0.271
+        }
+      },
+      {
+        "target": 0.3707455345659513,
+        "volatility": 0.05339426608580703,
+        "sharpe": 6.100758722714969,
+        "weights": {
+          "Immobilière": 0.6039,
+          "Automobile": 0.1026,
+          "Equipement": 0.2935
+        }
+      },
+      {
+        "target": 0.37973746183605395,
+        "volatility": 0.05498945164812633,
+        "sharpe": 6.087303142755736,
+        "weights": {
+          "Immobilière": 0.5788,
+          "Automobile": 0.1053,
+          "Equipement": 0.3159
+        }
+      },
+      {
+        "target": 0.3887293891061567,
+        "volatility": 0.05667216535990616,
+        "sharpe": 6.06522420527335,
+        "weights": {
+          "Immobilière": 0.5536,
+          "Automobile": 0.108,
+          "Equipement": 0.3384
+        }
+      },
+      {
+        "target": 0.39772131637625935,
+        "volatility": 0.0584348462212294,
+        "sharpe": 6.036146908659368,
+        "weights": {
+          "Immobilière": 0.5285,
+          "Automobile": 0.1107,
+          "Equipement": 0.3608
+        }
+      },
+      {
+        "target": 0.406713243646362,
+        "volatility": 0.06027047844107568,
+        "sharpe": 6.001499457151254,
+        "weights": {
+          "Immobilière": 0.5033,
+          "Automobile": 0.1134,
+          "Equipement": 0.3833
+        }
+      },
+      {
+        "target": 0.41570517091646475,
+        "volatility": 0.06217260073724493,
+        "sharpe": 5.962516711873551,
+        "weights": {
+          "Immobilière": 0.4782,
+          "Automobile": 0.1161,
+          "Equipement": 0.4057
+        }
+      },
+      {
+        "target": 0.4246970981865674,
+        "volatility": 0.06413529750183457,
+        "sharpe": 5.920251608339485,
+        "weights": {
+          "Immobilière": 0.453,
+          "Automobile": 0.1188,
+          "Equipement": 0.4282
+        }
+      },
+      {
+        "target": 0.4336890254566701,
+        "volatility": 0.06615317740792233,
+        "sharpe": 5.875591176216454,
+        "weights": {
+          "Immobilière": 0.4279,
+          "Automobile": 0.1215,
+          "Equipement": 0.4506
+        }
+      },
+      {
+        "target": 0.44268095272677277,
+        "volatility": 0.06822134393999083,
+        "sharpe": 5.829274677974429,
+        "weights": {
+          "Immobilière": 0.4027,
+          "Automobile": 0.1242,
+          "Equipement": 0.4731
+        }
+      },
+      {
+        "target": 0.45167287999687544,
+        "volatility": 0.07033536129922316,
+        "sharpe": 5.781912148951555,
+        "weights": {
+          "Immobilière": 0.3776,
+          "Automobile": 0.1269,
+          "Equipement": 0.4955
+        }
+      },
+      {
+        "target": 0.46066480726697817,
+        "volatility": 0.07249121823714412,
+        "sharpe": 5.734002233307671,
+        "weights": {
+          "Immobilière": 0.3524,
+          "Automobile": 0.1296,
+          "Equipement": 0.518
+        }
+      },
+      {
+        "target": 0.46965673453708084,
+        "volatility": 0.07468529163240585,
+        "sharpe": 5.685948668811555,
+        "weights": {
+          "Immobilière": 0.3273,
+          "Automobile": 0.1323,
+          "Equipement": 0.5404
+        }
+      },
+      {
+        "target": 0.4786486618071835,
+        "volatility": 0.07691431104306289,
+        "sharpe": 5.638075098461088,
+        "weights": {
+          "Immobilière": 0.3021,
+          "Automobile": 0.135,
+          "Equipement": 0.5629
+        }
+      },
+      {
+        "target": 0.48764058907728625,
+        "volatility": 0.07917532502326592,
+        "sharpe": 5.590638105334142,
+        "weights": {
+          "Immobilière": 0.277,
+          "Automobile": 0.1377,
+          "Equipement": 0.5853
+        }
+      },
+      {
+        "target": 0.4966325163473889,
+        "volatility": 0.08146566966612276,
+        "sharpe": 5.5438385052053265,
+        "weights": {
+          "Immobilière": 0.2519,
+          "Automobile": 0.1404,
+          "Equipement": 0.6078
+        }
+      },
+      {
+        "target": 0.5056244436174916,
+        "volatility": 0.0837829396002499,
+        "sharpe": 5.4978310120801455,
+        "weights": {
+          "Immobilière": 0.2267,
+          "Automobile": 0.1431,
+          "Equipement": 0.6302
+        }
+      },
+      {
+        "target": 0.5146163708875943,
+        "volatility": 0.08612496150517386,
+        "sharpe": 5.452732432970465,
+        "weights": {
+          "Immobilière": 0.2016,
+          "Automobile": 0.1458,
+          "Equipement": 0.6527
+        }
+      },
+      {
+        "target": 0.5236082981576969,
+        "volatility": 0.0884897701023993,
+        "sharpe": 5.408628563548726,
+        "weights": {
+          "Immobilière": 0.1764,
+          "Automobile": 0.1485,
+          "Equipement": 0.6751
+        }
+      },
+      {
+        "target": 0.5326002254277997,
+        "volatility": 0.09087558651025347,
+        "sharpe": 5.365579955544869,
+        "weights": {
+          "Immobilière": 0.1513,
+          "Automobile": 0.1512,
+          "Equipement": 0.6976
+        }
+      },
+      {
+        "target": 0.5415921526979024,
+        "volatility": 0.09328079881030654,
+        "sharpe": 5.323626716659659,
+        "weights": {
+          "Immobilière": 0.1261,
+          "Automobile": 0.1539,
+          "Equipement": 0.72
+        }
+      },
+      {
+        "target": 0.5505840799680051,
+        "volatility": 0.09570394465273874,
+        "sharpe": 5.282792488883444,
+        "weights": {
+          "Immobilière": 0.101,
+          "Automobile": 0.1566,
+          "Equipement": 0.7425
+        }
+      },
+      {
+        "target": 0.5595760072381077,
+        "volatility": 0.09814369572111761,
+        "sharpe": 5.243087734339173,
+        "weights": {
+          "Immobilière": 0.0758,
+          "Automobile": 0.1593,
+          "Equipement": 0.7649
+        }
+      },
+      {
+        "target": 0.5685679345082104,
+        "volatility": 0.1005988438790597,
+        "sharpe": 5.204512440894904,
+        "weights": {
+          "Immobilière": 0.0507,
+          "Automobile": 0.162,
+          "Equipement": 0.7874
+        }
+      },
+      {
+        "target": 0.5775598617783131,
+        "volatility": 0.10306828882884787,
+        "sharpe": 5.167058343839065,
+        "weights": {
+          "Immobilière": 0.0255,
+          "Automobile": 0.1646,
+          "Equipement": 0.8098
+        }
+      },
+      {
+        "target": 0.5865517890484158,
+        "volatility": 0.105559482383007,
+        "sharpe": 5.130299778123911,
+        "weights": {
+          "Immobilière": 0.02,
+          "Automobile": 0.1485,
+          "Equipement": 0.8315
+        }
+      },
+      {
+        "target": 0.5955437163185184,
+        "volatility": 0.10808913537056414,
+        "sharpe": 5.093423260636496,
+        "weights": {
+          "Immobilière": 0.02,
+          "Automobile": 0.1271,
+          "Equipement": 0.8529
+        }
+      },
+      {
+        "target": 0.6045356435886211,
+        "volatility": 0.11065524986113891,
+        "sharpe": 5.056566627347382,
+        "weights": {
+          "Immobilière": 0.02,
+          "Automobile": 0.1057,
+          "Equipement": 0.8743
+        }
+      },
+      {
+        "target": 0.6135275708587238,
+        "volatility": 0.11325534747195465,
+        "sharpe": 5.01987397106797,
+        "weights": {
+          "Immobilière": 0.02,
+          "Automobile": 0.0843,
+          "Equipement": 0.8957
+        }
+      },
+      {
+        "target": 0.6225194981288265,
+        "volatility": 0.11588714084246989,
+        "sharpe": 4.983464894641522,
+        "weights": {
+          "Immobilière": 0.02,
+          "Automobile": 0.0628,
+          "Equipement": 0.9172
+        }
+      },
+      {
+        "target": 0.6315114253989292,
+        "volatility": 0.11854851904085047,
+        "sharpe": 4.94743780980363,
+        "weights": {
+          "Immobilière": 0.02,
+          "Automobile": 0.0414,
+          "Equipement": 0.9386
+        }
+      },
+      {
+        "target": 0.6405033526690319,
+        "volatility": 0.12123753376492975,
+        "sharpe": 4.911872867883201,
+        "weights": {
+          "Immobilière": 0.02,
+          "Automobile": 0.02,
+          "Equipement": 0.96
+        }
+      }
+    ],
+    "max_sharpe_on_frontier_grid": 6.103777922030056,
+    "tangency_from_optimiser": 6.104108673070354,
+    "mc_cloud_best_sharpe": 6.1039426457521655,
+    "mc_points_above_minvar_return": 6711,
+    "mc_excess_vol_vs_frontier_pct_points": {
+      "median": 0.09934925901610991,
+      "p95": 1.5423639272433989,
+      "min": -0.001989300694874019
+    },
+    "mc_share_within_10bp_of_frontier": 0.5012665772612129
+  },
+  "out_of_sample": {
+    "first_month": "2022-08-01",
+    "last_month": "2025-12-01",
+    "n_months": 41,
+    "results": {
+      "expanding": {
+        "max-Sharpe": {
+          "avg_weights": {
+            "Immobilière": 0.6463,
+            "Automobile": 0.0314,
+            "Equipement": 0.3223
+          },
+          "clipped_0bp": {
+            "return": 0.2677280873339759,
+            "volatility": 0.030747227897493342,
+            "sharpe": 7.243842862079081
+          },
+          "clipped_10bp": {
+            "return": 0.26756907819449355,
+            "volatility": 0.030743424483429274,
+            "sharpe": 7.239566897124894
+          },
+          "clipped_25bp": {
+            "return": 0.26733056448527004,
+            "volatility": 0.030737778164590154,
+            "sharpe": 7.23313712834958
+          },
+          "clipped_50bp": {
+            "return": 0.26693304163656406,
+            "volatility": 0.030728524534953047,
+            "sharpe": 7.222378717992787
+          },
+          "annual_turnover_clipped": 0.16298436796944116,
+          "unclipped_0bp": {
+            "return": 0.27187188172774246,
+            "volatility": 0.033977419760545406,
+            "sharpe": 6.677136855200117
+          },
+          "annual_turnover_unclipped": 0.16802430108738048
+        },
+        "max-Sharpe LW+BS": {
+          "avg_weights": {
+            "Immobilière": 0.4371,
+            "Automobile": 0.1319,
+            "Equipement": 0.431
+          },
+          "clipped_0bp": {
+            "return": 0.30158227254311454,
+            "volatility": 0.039381886029957715,
+            "sharpe": 6.515235769763108
+          },
+          "clipped_10bp": {
+            "return": 0.30132484045262264,
+            "volatility": 0.03937530419934851,
+            "sharpe": 6.50978692519825
+          },
+          "clipped_25bp": {
+            "return": 0.30093869231688486,
+            "volatility": 0.039365576895403806,
+            "sharpe": 6.50158622079707
+          },
+          "clipped_50bp": {
+            "return": 0.3002951120906552,
+            "volatility": 0.03934975288556607,
+            "sharpe": 6.487845370543618
+          },
+          "annual_turnover_clipped": 0.2638678927541601,
+          "unclipped_0bp": {
+            "return": 0.3068693113061313,
+            "volatility": 0.043326950414323454,
+            "sharpe": 6.044028227279989
+          },
+          "annual_turnover_unclipped": 0.2688153274441073
+        },
+        "minimum variance": {
+          "avg_weights": {
+            "Immobilière": 0.7,
+            "Automobile": 0.1562,
+            "Equipement": 0.1438
+          },
+          "clipped_0bp": {
+            "return": 0.2204251027173883,
+            "volatility": 0.017194187566313426,
+            "sharpe": 10.202581659692857
+          },
+          "clipped_10bp": {
+            "return": 0.22028941545626035,
+            "volatility": 0.01719680457320044,
+            "sharpe": 10.193138772387515
+          },
+          "clipped_25bp": {
+            "return": 0.22008588456456846,
+            "volatility": 0.017200789543959042,
+            "sharpe": 10.178944641878898
+          },
+          "clipped_50bp": {
+            "return": 0.21974666641174856,
+            "volatility": 0.01720758960008394,
+            "sharpe": 10.155208862657682
+          },
+          "annual_turnover_clipped": 0.1390794426561488,
+          "unclipped_0bp": {
+            "return": 0.2220762154941902,
+            "volatility": 0.018165506174414585,
+            "sharpe": 9.747937315591857
+          },
+          "annual_turnover_unclipped": 0.14135086024424193
+        },
+        "risk parity (bounded)": {
+          "avg_weights": {
+            "Immobilière": 0.4827,
+            "Automobile": 0.2828,
+            "Equipement": 0.2344
+          },
+          "clipped_0bp": {
+            "return": 0.24413973974416286,
+            "volatility": 0.023945523464107797,
+            "sharpe": 8.316366106702807
+          },
+          "clipped_10bp": {
+            "return": 0.244012064921249,
+            "volatility": 0.0239489441609215,
+            "sharpe": 8.309847130796912
+          },
+          "clipped_25bp": {
+            "return": 0.24382055268687824,
+            "volatility": 0.023954123050721143,
+            "sharpe": 8.300055579821894
+          },
+          "clipped_50bp": {
+            "return": 0.24350136562959357,
+            "volatility": 0.023962882027096843,
+            "sharpe": 8.283701660139688
+          },
+          "annual_turnover_clipped": 0.13086669348670493,
+          "unclipped_0bp": {
+            "return": 0.2472688148807931,
+            "volatility": 0.026563197048953643,
+            "sharpe": 7.614626150159163
+          },
+          "annual_turnover_unclipped": 0.13469963761652998
+        },
+        "equal weight": {
+          "avg_weights": {
+            "Immobilière": 0.3333,
+            "Automobile": 0.3333,
+            "Equipement": 0.3333
+          },
+          "clipped_0bp": {
+            "return": 0.2710240516761861,
+            "volatility": 0.03142792213352469,
+            "sharpe": 7.191822950174695
+          },
+          "clipped_10bp": {
+            "return": 0.2708666019193719,
+            "volatility": 0.03142802272559015,
+            "sharpe": 7.186790078761807
+          },
+          "clipped_25bp": {
+            "return": 0.27063042728415054,
+            "volatility": 0.031428274956519404,
+            "sharpe": 7.179217682049276
+          },
+          "clipped_50bp": {
+            "return": 0.27023680289211494,
+            "volatility": 0.03142896558085007,
+            "sharpe": 7.166535669546617
+          },
+          "annual_turnover_clipped": 0.1613860007345892,
+          "unclipped_0bp": {
+            "return": 0.2757114750689676,
+            "volatility": 0.03575860023611379,
+            "sharpe": 6.451915722248112
+          },
+          "annual_turnover_unclipped": 0.1672736926192212
+        },
+        "actual book": {
+          "avg_weights": {
+            "Immobilière": 0.8333,
+            "Automobile": 0.0577,
+            "Equipement": 0.109
+          },
+          "clipped_0bp": {
+            "return": 0.20003832826391588,
+            "volatility": 0.016160199095284388,
+            "sharpe": 9.593837758419493
+          },
+          "clipped_10bp": {
+            "return": 0.20003553712323763,
+            "volatility": 0.016160192865292296,
+            "sharpe": 9.593668739945045
+          },
+          "clipped_25bp": {
+            "return": 0.2000313504122203,
+            "volatility": 0.0161601859058008,
+            "sharpe": 9.593413795850632
+          },
+          "clipped_50bp": {
+            "return": 0.2000243725605248,
+            "volatility": 0.016160180667980868,
+            "sharpe": 9.592985112331316
+          },
+          "annual_turnover_clipped": 0.002860919195171471,
+          "unclipped_0bp": {
+            "return": 0.20170210361717777,
+            "volatility": 0.017396477551688144,
+            "sharpe": 9.007691537070475
+          },
+          "annual_turnover_unclipped": 1.1657341758564144e-15
+        }
+      },
+      "rolling": {
+        "max-Sharpe": {
+          "avg_weights": {
+            "Immobilière": 0.6083,
+            "Automobile": 0.1297,
+            "Equipement": 0.262
+          },
+          "clipped_0bp": {
+            "return": 0.2622085504041738,
+            "volatility": 0.028437900285496538,
+            "sharpe": 7.6379953591352585
+          },
+          "clipped_10bp": {
+            "return": 0.26143091841953126,
+            "volatility": 0.02850019246115211,
+            "sharpe": 7.594016030401997
+          },
+          "clipped_25bp": {
+            "return": 0.2602644704425675,
+            "volatility": 0.02859967690915972,
+            "sharpe": 7.526814765296317
+          },
+          "clipped_50bp": {
+            "return": 0.2583203904809612,
+            "volatility": 0.028781418326410527,
+            "sharpe": 7.411740035243964
+          },
+          "annual_turnover_clipped": 0.7970727842585805,
+          "unclipped_0bp": {
+            "return": 0.2647613221963893,
+            "volatility": 0.029764935204594997,
+            "sharpe": 7.383228644235833
+          },
+          "annual_turnover_unclipped": 0.8005539269217048
+        },
+        "max-Sharpe LW+BS": {
+          "avg_weights": {
+            "Immobilière": 0.4453,
+            "Automobile": 0.1991,
+            "Equipement": 0.3556
+          },
+          "clipped_0bp": {
+            "return": 0.2902712247655036,
+            "volatility": 0.03622433544203949,
+            "sharpe": 6.770896464282918
+          },
+          "clipped_10bp": {
+            "return": 0.2894627814287414,
+            "volatility": 0.03627567084055358,
+            "sharpe": 6.739028549003418
+          },
+          "clipped_25bp": {
+            "return": 0.28825011642359794,
+            "volatility": 0.036356096558059096,
+            "sharpe": 6.6907654961015455
+          },
+          "clipped_50bp": {
+            "return": 0.2862290080816923,
+            "volatility": 0.03649919851324003,
+            "sharpe": 6.609159047538726
+          },
+          "annual_turnover_clipped": 0.828654420181307,
+          "unclipped_0bp": {
+            "return": 0.29444966495011915,
+            "volatility": 0.038962920208020974,
+            "sharpe": 6.402232266429738
+          },
+          "annual_turnover_unclipped": 0.8327207108479329
+        },
+        "minimum variance": {
+          "avg_weights": {
+            "Immobilière": 0.6678,
+            "Automobile": 0.233,
+            "Equipement": 0.0992
+          },
+          "clipped_0bp": {
+            "return": 0.20366180452298982,
+            "volatility": 0.020173696161926026,
+            "sharpe": 7.864786068426741
+          },
+          "clipped_10bp": {
+            "return": 0.20315182293478085,
+            "volatility": 0.020205737012777922,
+            "sharpe": 7.827075193286298
+          },
+          "clipped_25bp": {
+            "return": 0.2023868505524674,
+            "volatility": 0.02025728477159776,
+            "sharpe": 7.769395174477463
+          },
+          "clipped_50bp": {
+            "return": 0.20111189658194498,
+            "volatility": 0.020352414904605445,
+            "sharpe": 7.670436030007387
+          },
+          "annual_turnover_clipped": 0.5227311279141886,
+          "unclipped_0bp": {
+            "return": 0.20547299304231972,
+            "volatility": 0.021294981365730176,
+            "sharpe": 7.535718876024351
+          },
+          "annual_turnover_unclipped": 0.5258308276067438
+        },
+        "risk parity (bounded)": {
+          "avg_weights": {
+            "Immobilière": 0.5224,
+            "Automobile": 0.2993,
+            "Equipement": 0.1783
+          },
+          "clipped_0bp": {
+            "return": 0.22503742708424423,
+            "volatility": 0.021627657801530902,
+            "sharpe": 8.324407050286341
+          },
+          "clipped_10bp": {
+            "return": 0.22457242835865837,
+            "volatility": 0.021667234437181073,
+            "sharpe": 8.287741053399564
+          },
+          "clipped_25bp": {
+            "return": 0.2238749302702796,
+            "volatility": 0.02172906222531093,
+            "sharpe": 8.232059368945915
+          },
+          "clipped_50bp": {
+            "return": 0.22271243345631497,
+            "volatility": 0.021838613378831723,
+            "sharpe": 8.137532835696087
+          },
+          "annual_turnover_clipped": 0.4766236937254949,
+          "unclipped_0bp": {
+            "return": 0.22753233711937473,
+            "volatility": 0.02328699296106703,
+            "sharpe": 7.838381598884244
+          },
+          "annual_turnover_unclipped": 0.47982766699986246
+        },
+        "equal weight": {
+          "avg_weights": {
+            "Immobilière": 0.3333,
+            "Automobile": 0.3333,
+            "Equipement": 0.3333
+          },
+          "clipped_0bp": {
+            "return": 0.2710240516761861,
+            "volatility": 0.03142792213352469,
+            "sharpe": 7.191822950174695
+          },
+          "clipped_10bp": {
+            "return": 0.2708666019193719,
+            "volatility": 0.03142802272559015,
+            "sharpe": 7.186790078761807
+          },
+          "clipped_25bp": {
+            "return": 0.27063042728415054,
+            "volatility": 0.031428274956519404,
+            "sharpe": 7.179217682049276
+          },
+          "clipped_50bp": {
+            "return": 0.27023680289211494,
+            "volatility": 0.03142896558085007,
+            "sharpe": 7.166535669546617
+          },
+          "annual_turnover_clipped": 0.1613860007345892,
+          "unclipped_0bp": {
+            "return": 0.2757114750689676,
+            "volatility": 0.03575860023611379,
+            "sharpe": 6.451915722248112
+          },
+          "annual_turnover_unclipped": 0.1672736926192212
+        },
+        "actual book": {
+          "avg_weights": {
+            "Immobilière": 0.8333,
+            "Automobile": 0.0577,
+            "Equipement": 0.109
+          },
+          "clipped_0bp": {
+            "return": 0.20003832826391588,
+            "volatility": 0.016160199095284388,
+            "sharpe": 9.593837758419493
+          },
+          "clipped_10bp": {
+            "return": 0.20003553712323763,
+            "volatility": 0.016160192865292296,
+            "sharpe": 9.593668739945045
+          },
+          "clipped_25bp": {
+            "return": 0.2000313504122203,
+            "volatility": 0.0161601859058008,
+            "sharpe": 9.593413795850632
+          },
+          "clipped_50bp": {
+            "return": 0.2000243725605248,
+            "volatility": 0.016160180667980868,
+            "sharpe": 9.592985112331316
+          },
+          "annual_turnover_clipped": 0.002860919195171471,
+          "unclipped_0bp": {
+            "return": 0.20170210361717777,
+            "volatility": 0.017396477551688144,
+            "sharpe": 9.007691537070475
+          },
+          "annual_turnover_unclipped": 1.1657341758564144e-15
+        }
+      }
+    }
+  },
+  "time_variation": {
+    "rolling_24m_correlation": {
+      "Immobilière-Automobile": {
+        "min": -0.14080559689307123,
+        "median": 0.19279842338302308,
+        "max": 0.5763509238589792,
+        "last": 0.5763509238589792,
+        "full_sample": 0.4663299816665767
+      },
+      "Immobilière-Equipement": {
+        "min": -0.3200871270178932,
+        "median": -0.0282703358803112,
+        "max": 0.495061850455629,
+        "last": 0.1548857616014678,
+        "full_sample": 0.24659514894478718
+      },
+      "Automobile-Equipement": {
+        "min": -0.6942613501259844,
+        "median": -0.19312112405584972,
+        "max": 0.31751596366823326,
+        "last": 0.27508875182120485,
+        "full_sample": -0.017961314698330927
+      }
+    },
+    "split_sample": {
+      "2019-08..2022-09": {
+        "weights": {
+          "Immobilière": 0.6885621557650667,
+          "Automobile": 0.02,
+          "Equipement": 0.2914378442349333
+        },
+        "return": 0.4921045362420631,
+        "volatility": 0.05241354983077282,
+        "sharpe": 8.5303235076736,
+        "mu": {
+          "Immobilière": 0.3427874475088738,
+          "Automobile": 0.2940352745475673,
+          "Equipement": 0.8584793357293418
+        }
+      },
+      "2022-10..2025-12": {
+        "weights": {
+          "Immobilière": 0.7,
+          "Automobile": 0.14982168153584915,
+          "Equipement": 0.1501783184640631
+        },
+        "return": 0.2141491417949105,
+        "volatility": 0.01637842803986075,
+        "sharpe": 10.327556550802456,
+        "mu": {
+          "Immobilière": 0.16820532335168195,
+          "Automobile": 0.18178221251546284,
+          "Equipement": 0.46058911435282573
+        }
+      }
+    },
+    "volatility_by_half": {
+      "first_half": {
+        "Immobilière": 0.0508,
+        "Automobile": 0.0952,
+        "Equipement": 0.1309
+      },
+      "second_half": {
+        "Immobilière": 0.0134,
+        "Automobile": 0.06,
+        "Equipement": 0.0918
+      }
+    }
+  }
+}
