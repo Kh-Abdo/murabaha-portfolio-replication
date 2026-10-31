@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python run_all.py
 ```
 
-The run takes a few minutes, mostly for the bootstrap. It overwrites `data/data_corrected.xlsx`, `outputs/`, `figures/` and `tables/`. The committed copies of these files are the ones used in the paper, so `git diff` after a run shows any difference.
+The run takes about four minutes on a laptop, mostly for the bootstrap. It overwrites `data/data_corrected.xlsx`, `outputs/`, `figures/` and `tables/`. The committed copies of these files are the ones used in the paper, so `git status` after a run shows any difference. A clean rerun reproduces `outputs/`, `tables/` and the PNG figures byte for byte. Only the `.xlsx` and PDF files show as modified, because they embed a creation timestamp.
 
 ## What is in the package
 
