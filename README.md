@@ -1,6 +1,6 @@
 # Murabaha portfolio allocation: replication package
 
-Data and code for the paper **"Quadratic Programming for Murabaha Portfolio Risk Management: A Strategic Asset Allocation Framework"** by Soukaina Hlal, Asmae Daaou, Abdelwadoud El Khalfi, Mohamed El Gharb, Asmaa Faris and Mostafa El Hachloufi (Hassan II University, Casablanca). The manuscript is under revision at *Statistics, Optimization & Information Computing* (SOIC).
+Data and code for the paper **"Quadratic Programming for Murabaha Portfolio Risk Management: A Strategic Asset Allocation Framework"** by Abdelwadoud El Khalfi, Asmaa Faris, Asmae Daaou, Mohamed El Gharb, Mostafa El Hachloufi and Soukaina Hlal (Hassan II University, Casablanca). The manuscript is under revision at *Statistics, Optimization & Information Computing* (SOIC).
 
 The package rebuilds every number, table and figure in the paper from the raw data with one command.
 
