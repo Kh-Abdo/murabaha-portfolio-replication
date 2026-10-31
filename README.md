@@ -4,6 +4,8 @@ Data and code for the paper **"Quadratic Programming for Murabaha Portfolio Risk
 
 The package rebuilds every number, table and figure in the paper from the raw data with one command.
 
+A one-page summary of the study is at https://kh-abdo.github.io/murabaha-portfolio-replication/ (source: `docs/index.html`).
+
 ## Quick start
 
 Python 3.12 was used.
